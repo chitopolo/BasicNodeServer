@@ -48,7 +48,7 @@ var routes = {
 
 var sendResponse = function(response, data, statusCode){
 	statusCode = statusCode || 200;
-	response.writeHead(200, headers);
+	response.writeHead(statusCode, headers);
 	response.end(JSON.stringify(data));
 }
 
